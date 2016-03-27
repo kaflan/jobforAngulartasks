@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#date-Cheme-edit-time-start").datetimepicker({format:"HH:mm p"}),$("#date-Cheme-edit-time-end").datetimepicker({format:"HH:mm p"}),$("#date-Task-from-rang").datetimepicker({}),$("#date-task-from-people").datetimepicker({}),$("#date-History-audit-start").datetimepicker({}),$("#date-History-audit-end").datetimepicker({})});

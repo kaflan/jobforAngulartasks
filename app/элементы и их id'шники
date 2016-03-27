@@ -1,0 +1,7 @@
+элементы и их id'шники:
+Контекст
+Создать - context_create
+Показать неактивные - context_showInactive
+Редактировать - context_edit0
+user_login = "demoIikoCheckList@demo.net"
+user_secret ="demo357123";

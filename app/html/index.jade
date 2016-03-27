@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+html(lang="en")
+	//Include header
+	include ./block_html/head.jade 
+body
+	.main-cont
+		.admin-left
+			#accordion-id.panel-group
+					.panel.panel-default
+						.panel-heading
+							h4.panel-title
+								a.accordion-toggle.collapsed(data-toggle="collapse", data-parent="#accordion-id", href="#collapseOne")
+									| Стартовая страница
+						#collapseOne.panel-collapse.collapse
+							.panel-body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+					.panel.panel-default
+						.panel-heading
+							h4.panel-title
+								a.accordion-toggle.collapsed(data-toggle="collapse", data-parent="#accordion-id", href="#collapseTwo")
+									| Общие
+						#collapseTwo.panel-collapse.collapse
+							.panel-body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+
+					.panel.panel-default
+						.panel-heading
+							h4.panel-title
+								a.accordion-toggle.collapsed(data-toggle="collapse", data-parent="#accordion-id", href="#collapseTree")
+									| iiko Checklist
+						#collapseTree.panel-collapse.collapse
+							.panel-body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+
+					.panel.panel-default
+						.panel-heading
+							h4.panel-title
+								a.accordion-toggle.collapsed(data-toggle="collapse", data-parent="#accordion-id", href="#collapseFor")
+									| iiko inspector
+						#collapseFor.panel-collapse.collapse
+							.panel-body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+								.panel-body-el
+									a(href="") Panel body
+
+		.admin-right
+			//Contects
+			.Contects
+				h1 Контексты
+
+				.line-left
+					a(href="").admin-link Создать
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Показать неактивные.
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Наименование
+							th Активен
+							th Редактировать
+					tbody
+						tr
+							td Бар
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Склад
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Учет
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+
+			//Contects-edit
+			.Contects-edit.section
+				h1 Редактирование контекста!
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Наименование
+						.col-sm-10
+							input#inputEmail3.form-control(type='', placeholder='Ресторан')
+
+				.line-right
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Активны
+
+				.line-right
+					button(type="button").btn.btn-default Отменить 
+					button(type="button").btn.btn-default Сохранить 
+
+			//Check-list
+			.Check-list.section
+				h1 Чеклисты
+
+				.line-left
+					a(href="").admin-link Создать
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Показать неактивные.
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Наименование
+							th Активен
+							th Редактировать
+					tbody
+						tr
+							td Открытие смены
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Закрытие смены
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Санитарный день
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+
+			//Contects-edit
+			.Check-list-edit.section
+				h1 Редактирование чек листа
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Наименование
+						.col-sm-10
+							input#inputEmail3.form-control(type='', placeholder='Открытие смены')
+
+					.line-right
+						.checkbox
+							label
+								input(type="checkbox", value="")
+								span Активны
+
+					.line-right.m20_0
+						button(type="button").btn.btn-default Отменить 
+						button(type="button").btn.btn-default Сохранить 
+
+			//Cheme-task
+			.Cheme-task.section
+				h1 Схема задач
+
+				.line-left
+					a(href="").admin-link Создать
+					a(href="").admin-link Группировать по ролям
+					a(href="").admin-link Группировать по чеклистам
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Показать неактивные.
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Наименование
+							th Активен
+							th Редактировать
+					tbody
+						tr
+							td Открытие смены
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Закрытие смены
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Санитарный день
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+
+			//Cheme-edit
+			.Cheme-edit.section
+				h1 Редактирование задачи
+
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Наименование
+						.col-sm-10
+							input.form-control(type='', placeholder='Открытие смены')
+					.form-group
+						label.col-sm-2.control-label(for='') Описание
+						.col-sm-10
+							textarea(name="", cols="30", rows="10").form-control(type='', placeholder='Открытие смены')
+					.Cheme-edit-prop.border-form
+						h3 Свойства
+						.form-group
+							label.col-sm-2.control-label(for='') Чек-лист
+							.col-sm-10
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+
+						.form-group
+							label.col-sm-2.control-label(for='') Роль
+							.col-sm-10
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+
+						.form-group
+							label.col-sm-2.control-label(for='') Контекст
+
+							.col-sm-10
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+
+						.line-left
+							.checkbox
+								label
+									input(type="checkbox", value="")
+									span Задавать вопрос при закрытие задачи
+
+						.form-group.m20_0
+							label.col-sm-2.control-label(for='') Вопрос
+							.col-sm-10
+								input.form-control(type='', placeholder='Открытие смены')
+
+					.Cheme-edit-time.border-form
+						h3 Время исполнения и повтор
+						form.form-horizontal(action="", method="POST", role="form")
+							.form-group
+								.checkbox.col-sm-6
+									label
+										input(type="checkbox", value="")
+										span Время начала исполнения
+								#date-Cheme-edit-time-start.input-group.date.col-sm-6
+									input.form-control(type='text')
+									span.input-group-addon
+										span.glyphicon.glyphicon-calendar
+
+							.form-group
+								.checkbox.col-sm-6
+									label
+										input(type="checkbox", value="")
+										span Время окончания исполнения
+								#date-Cheme-edit-time-end.input-group.date.col-sm-6
+									input.form-control(type='text')
+									span.input-group-addon
+										span.glyphicon.glyphicon-calendar
+
+							.line-left
+								.checkbox
+									label
+										input(type="checkbox", value="")
+										span Повторять задачу ежедневно
+							.weekdays
+								- each val in ['Понедельник','Вторник', 'Среда' , 'Четверг', 'Пятница', 'Суббота', 'Воскресение']
+									.line-left
+									.checkbox
+										label
+											input(type="checkbox", value="")
+											span #{val}
+
+				.line-right
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Активны
+
+				.line-right
+					button(type="button").btn.btn-default Отменить 
+					button(type="button").btn.btn-default Сохранить 
+
+			//Task-from-rang
+			.Task-from-rang.section
+				h1 Задачи по должностям
+				span.col-sm-2 Дата
+				#date-Task-from-rang.input-group.date.col-sm-10
+					input.form-control(type='text')
+					span.input-group-addon
+						span.glyphicon.glyphicon-calendar
+
+				- each val in ['Иванов','Попов', 'Сидоров']
+					.Task-from-rang-row.m20_0
+						span.col-sm-2 #{val}
+						.progress
+							.progress-bar.progress-bar-success(style='width: 35%')
+								span.sr-only 35% Complete (success)
+							.progress-bar.progress-bar-warning.progress-bar-striped(style='width: 20%')
+								span.sr-only 20% Complete (warning)
+							.progress-bar.progress-bar-danger(style='width: 10%')
+								span.sr-only 10% Complete (danger)
+
+				.progres-color-info
+					.progres-color-info-items
+						.progres-color-info-good
+						.progres-color-info-text Задачи, выполненые вовремя
+
+					.progres-color-info-items
+						.progres-color-info-time
+						.progres-color-info-text Задачи, в процессе выполнения
+
+					.progres-color-info-items
+						.progres-color-info-bad
+						.progres-color-info-text Просроченные задачи
+
+			//Task-from-people
+			.Task-from-people.section
+				h1 Задачи по сотрудникам
+				span.col-sm-2 Дата
+				#date-task-from-people.input-group.date.col-sm-10
+					input.form-control(type='text')
+					span.input-group-addon
+						span.glyphicon.glyphicon-calendar
+
+				- each val in ['Иванов','Попов', 'Сидоров']
+					.Task-from-rang-row.m20_0
+						span.col-sm-2 #{val}
+						.progress
+							.progress-bar.progress-bar-success(style='width: 45%')
+								span.sr-only 15% Complete (success)
+							.progress-bar.progress-bar-warning.progress-bar-striped(style='width: 10%')
+								span.sr-only 40% Complete (warning)
+							.progress-bar.progress-bar-danger(style='width: 20%')
+								span.sr-only 10% Complete (danger)
+
+				.progres-color-info
+					.progres-color-info-items
+						.progres-color-info-good
+						.progres-color-info-text Задачи, выполненые вовремя
+
+					.progres-color-info-items
+						.progres-color-info-time
+						.progres-color-info-text Задачи, в процессе выполнения
+
+					.progres-color-info-items
+						.progres-color-info-bad
+						.progres-color-info-text Просроченные задачи
+
+			//percent-good
+			.percent-good.section
+				h1 % Выполненых задач
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Сотрудник
+							th Дата
+							th % Выполненых задач
+					tbody
+						tr
+							td Бар
+							td 2015-11-21 
+								
+							td 13%
+								
+						tr
+							td Склад
+							td 2011-07-22 
+								
+							td 66%
+								
+						tr
+							td Учет
+							td 2014-01-02 
+							td 77%
+			
+			//Valid-obj
+			.Valid-obj.section
+				h1 Проверяем объекты
+
+				.line-left
+					a(href="").admin-link Создать
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Показать неактивные.
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Наименование
+							th Активен
+							th Редактировать
+					tbody
+						tr
+							td Бар
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Склад
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Учет
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+
+			//Valid-obj-edit
+			.Contects-edit.section
+				h1 Редактирование проверяемого объекта
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Наименование
+						.col-sm-10
+							input#inputEmail3.form-control(type='', placeholder='Ресторан')
+
+				.line-right
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Активен
+
+				.line-right
+					button(type="button").btn.btn-default Отменить 
+					button(type="button").btn.btn-default Сохранить 
+
+			//Type-valid
+			.Type-valid.section
+				h1 Виды аудитов
+
+				.line-left
+					a(href="").admin-link Создать
+					a(href="").admin-link Загрузить из шаблона
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Показать неактивные.
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Наименование
+							th Активен
+							th Редактировать
+					tbody
+						tr
+							td Бар
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Склад
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Учет
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+
+			//Type-valid-edit
+			.Type-valid-edit.section
+				h1 Редактирование вида аудита
+
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Наименование
+						.col-sm-10
+							input.form-control(type='', placeholder='Финансовая дисциплина')
+					.form-group
+						label.col-sm-2.control-label(for='') Описание
+						.col-sm-10
+							textarea(name="", cols="30", rows="10").form-control(type='', placeholder='')
+
+					.line-right.m20_0
+						button(type="button").btn.btn-default Добавить группу проверок 
+						button(type="button").btn.btn-default Добавить проверку
+
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Чек-лист
+						.col-sm-10
+							textarea(name="", cols="30", rows="10").form-control(type='', placeholder='')
+
+					.line-right.m20_0
+						.checkbox
+							label
+								input(type="checkbox", value="")
+								span Активен
+					.line-right
+						button(type="button").btn.btn-default Отменить 
+						button(type="button").btn.btn-default Сохранить 
+
+			//Edit-group-valid
+			.Edit-group-valid.section
+				h1 Редактирование группы проверок
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Наименование
+						.col-sm-10
+							input.form-control(type='', placeholder='Финансовая дисциплина')
+					.line-left.m10_0
+						.checkbox
+							label
+								input(type="checkbox", value="")
+								span Требовать обязательно заполнения проверяемого сотрудника
+					.line-left.m10_0
+						.checkbox
+							label
+								input(type="checkbox", value="")
+								span Активен
+					.line-right.m10_0
+						button(type="button").btn.btn-default Отменить 
+						button(type="button").btn.btn-default Сохранить 
+
+			//Edit-valid
+			.Edit-valid.section
+				h1 Редактирование проверки
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-3.control-label(for='') Наименование
+						.col-sm-9
+							input.form-control(type='', placeholder='Финансовая дисциплина')
+					.form-group
+							label.col-sm-3.control-label(for='') Группа проверок
+							.col-sm-9
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+					.form-group
+							label.col-sm-3.control-label(for='') Группа проверок
+							.col-sm-9
+								input(type="number").input-number
+					.form-group
+						.checkbox.col-sm-3
+							label
+								input(type="checkbox", value="")
+								span Задавать вопрос
+						label.col-sm-3.control-label(for='') Текст вопроса
+						.col-sm-6
+							input.form-control(type='', placeholder='Ресторан')
+					.form-group
+						label.col-sm-2.control-label(for='') Описание
+						.col-sm-10
+							textarea(name="", cols="30", rows="10").form-control(type='', placeholder='Открытие смены')
+					.line-right.m20_0
+						button(type="button").btn.btn-default Сохранить 
+
+			//History-audit
+			.History-audit.section
+				h1 История аудитов
+				.form-group.line-left
+					label.col-sm-2.control-label(for='') Период с:
+					#date-History-audit-start.input-group.date.col-sm-2
+						input.form-control(type='text')
+						span.input-group-addon
+							span.glyphicon.glyphicon-calendar
+					label.col-sm-1.control-label(for='') по:
+					#date-History-audit-end.input-group.date.col-sm-2
+						input.form-control(type='text')
+						span.input-group-addon
+							span.glyphicon.glyphicon-calendar
+
+				.form-group.line-left
+					label.col-sm-2.control-label(for='') Аудиты:
+					.col-sm-4
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+					label.col-sm-2.control-label(for='') Объекты:
+					.col-sm-4
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+
+				table.table.table-striped.table-bordered.m20_0
+					thead.small-thead
+						tr
+							th Наименование
+							th Дата аудита
+							th Аудитор
+							th Проверяемый объект
+							th Проверяемый объектрезультат
+							th Посмотреть
+					tbody
+						tr
+							td Финансовая дисциплина
+							td 2016-06-12
+							td Marcie
+							td tandemist
+							td 86%
+							td 
+								a(href="").admin-link Посмореть
+						tr
+							td Финансовая дисциплина
+							td 2016-04-10
+							td Carly
+							td Websterian
+							td 11%
+							td 
+								a(href="").admin-link Посмореть
+						tr
+							td Финансовая дисциплина
+							td 2016-02-22
+							td Bertie
+							td misaffection
+							td 8%
+							td 
+								a(href="").admin-link Посмореть
+
+			//Audit-finance
+			.Edit-valid.section
+				h1 Аудит " Финансовая дисциплина ", 25.12.2015
+
+				.line-left
+						button(type="button").btn.btn-default Отправить на почту 
+						button(type="button").btn.btn-default Сохранить в PDF
+
+				table.table.m20_0
+					tr
+						td Аудитор
+						td Иванов
+					tr
+						td Дата аудита
+						td 20.10.2013
+					tr
+						td Проверяемый объект
+						td Ресторан
+					tr
+						td Результат
+						td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat aliquam dolores, nesciunt cum numquam illum iure asperiores voluptates, porro earum. Suscipit optio, assumenda error nihil sed sequi quae eius minus officiis amet quos adipisci recusandae ea tenetur, mollitia animi. Non!
+					tr
+						td Комментарий
+						td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat aliquam dolores, nesciunt cum numquam illum iure asperiores voluptates, porro earum. Suscipit optio, assumenda error nihil sed sequi quae eius minus officiis amet quos adipisci recusandae ea tenetur, mollitia animi. Non!
+
+			//Check-lists
+			.Check-lists.section
+				h1 Чек листы
+
+				h4 1. Закупочные цены соответсвуют сезонным
+				table.table.m20_0
+					tr
+						td Цены на мясо
+						td 
+							span.label.label-success Да
+					tr
+						td Цены на овощиц
+						td 
+							span.label.label-danger Нет
+
+				h4 2. Соответсвие выручки
+				table.table.m20_0
+					tr
+						td Сырье и товар не превышают лимит
+						td 
+							span.label.label-info Пропущено
+					tr
+						td Сумма в кассе соответсвует
+						td 
+							span.label.label-success Да
+					tr
+						td Сумма в кассе
+						td 32000 р.
+
+			//Log-persons
+			.Log-persons.section
+				h1 Отчет по сотрудникам
+				.line-left.m20_0
+						button(type="button").btn.btn-default Отправить на почту 
+						button(type="button").btn.btn-default Сохранить в PDF
+				.form-group.line-left
+					label.col-sm-2.control-label(for='') Период с:
+					#date-History-audit-start.input-group.date.col-sm-2
+						input.form-control(type='text')
+						span.input-group-addon
+							span.glyphicon.glyphicon-calendar
+					label.col-sm-1.control-label(for='') по:
+					#date-History-audit-end.input-group.date.col-sm-2
+						input.form-control(type='text')
+						span.input-group-addon
+							span.glyphicon.glyphicon-calendar
+
+				.form-group.line-left
+					label.col-sm-2.control-label(for='') Аудиты:
+					.col-sm-4
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+
+
+			//Log-audits
+			.Log-audits.section
+				h1 Отчет по Аудитам
+				.line-left.m20_0
+						button(type="button").btn.btn-default Отправить на почту 
+						button(type="button").btn.btn-default Сохранить в PDF
+				.form-group.line-left
+					label.col-sm-2.control-label(for='') Период с:
+					#date-History-audit-start.input-group.date.col-sm-2
+						input.form-control(type='text')
+						span.input-group-addon
+							span.glyphicon.glyphicon-calendar
+					label.col-sm-1.control-label(for='') по:
+					#date-History-audit-end.input-group.date.col-sm-2
+						input.form-control(type='text')
+						span.input-group-addon
+							span.glyphicon.glyphicon-calendar
+
+				.form-group.line-left
+					label.col-sm-2.control-label(for='') Аудиты:
+					.col-sm-4
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+					
+			//Orgainsation
+			.Orgainsation.section
+				h1 Организация
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-2.control-label(for='') Наименование
+						.col-sm-10
+							input#inputEmail3.form-control(type='text', placeholder='Открытие смены')
+					.form-group
+						label.col-sm-2.control-label(for='') Email ресторана
+						.col-sm-10
+							input#inputEmail3.form-control(type='', placeholder='Открытие смены')
+					
+					h4.m20_0 Лицензии
+
+					table.table
+						tbody
+							tr
+								td iikoCheckList
+								td 
+									span.label.label-danger Неактивно
+								td
+									button(type="button").btn.btn-default Запросить лицензию
+							tr
+								td iikoInspector
+								td 
+									span.label.label-danger Неактивно
+								td
+									button(type="button").btn.btn-default Запросить лицензию
+
+					h4.m20_0  Параметры подключения мобильных приложений
+
+					.form-group
+						label.col-sm-2.control-label(for='') Код
+						.col-sm-10
+							p 23523
+					.form-group
+						label.col-sm-2.control-label(for='') Пароль
+						.col-sm-10
+							input#inputEmail3.form-control(type='', placeholder='Открытие смены')
+
+					.line-right.m20_0
+						button(type="button").btn.btn-default Отменить 
+						button(type="button").btn.btn-default Сохранить
+				
+			//People
+			.People.section
+				h1 Сотрудники
+
+				.line-left
+					a(href="").admin-link Создать
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Показать неактивные.
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Наименование
+							th Место работы
+							th Роль
+							th Активен
+							th Редактировать 
+					tbody
+						tr
+							td Percy
+							td Ресторан ромашка
+							td Администратор
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Ozella
+							td Ресторан ромашка
+							td Администратор
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Claudia
+							td Ресторан ромашка
+							td Администратор
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+			
+			//Role
+			.Role.section
+				h1 Роли
+
+				.line-left
+					a(href="").admin-link Создать
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Показать неактивные.
+
+				table.table.table-striped.table-bordered
+					thead
+						tr
+							th Наименование
+							th Активен
+							th Редактировать 
+					tbody
+						tr
+							td Percy
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Ozella
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+						tr
+							td Claudia
+							td 
+								input(type="checkbox", value="")
+							td 
+								a(href="").admin-link Редактировать
+
+			//People-edit
+			.People-edit.section
+				h1 Редактирование сотрудника
+
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-3.control-label(for='') ФИО
+						.col-sm-9
+							input.form-control(type='', placeholder='ФИО')
+					.form-group
+							label.col-sm-3.control-label(for='') Место работы
+							.col-sm-9
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+					.form-group
+							label.col-sm-3.control-label(for='') Роль
+							.col-sm-9
+								select.form-control
+									option Lorem
+									option Lorem
+									option Lorem
+					h4.m20_0 iikoInspector
+
+					.form-group
+						label.col-sm-3.control-label(for='') Логин для входа
+						.col-sm-9
+							input.form-control(type='', placeholder='')
+					.form-group
+						label.col-sm-3.control-label(for='') Пароль для входа
+						.col-sm-9
+							input.form-control(type='', placeholder='')
+
+					h4.m20_0 iikoCheckList
+
+					.form-group
+						label.col-sm-3.control-label(for='') PIN-код
+						.col-sm-9
+							input.form-control(type='', placeholder='')
+				.line-left
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Активны
+
+				.line-right
+					button(type="button").btn.btn-default Отменить 
+					button(type="button").btn.btn-default Сохранить 
+
+			//Role-edit
+			.Role-edit.section
+				h1 Редактирование роли
+
+				form.form-horizontal(action="", method="POST", role="form")
+					.form-group
+						label.col-sm-3.control-label(for='') Наименование
+						.col-sm-9
+							input.form-control(type='', placeholder='Наименование')
+					
+					h4.m20_0 iikoInspector
+					.line-left
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Инспектор
+					.line-left
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Администратор
+
+					h4.m20_0 iikoCheckList
+					.line-left
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Менеджер
+					.line-left
+					.checkbox
+						label
+							input(type="checkbox", value="")
+							span Администратор
+
+
+					.line-right.m20_0
+						.checkbox
+							label
+								input(type="checkbox", value="")
+								span Активны
+					.line-right
+						button(type="button").btn.btn-default Отменить 
+						button(type="button").btn.btn-default Сохранить 
+//Include Footer
+include ./block_html/script.jade
